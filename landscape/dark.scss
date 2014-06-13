@@ -1,4 +1,5 @@
 $colorVariant:dark;
+$subduedText: rgba(255,255,255,0.6);
 
 //CALL UNIVERSALS
 @import '../globals/universals';
@@ -79,6 +80,7 @@ $colorVariant:dark;
     font-size:0.8575em;
     line-height:1.1;
     margin-bottom:$mainGutter/4;
+    color:$subduedText;
     .webkite-category + .webkite-subcategory::before {
       content:'\2022\0020';
       color:$lightOpacity;
@@ -159,7 +161,7 @@ $colorVariant:dark;
       height: 2em;
       margin-left: -$mainGutter/4;
       i{
-        background: url("angle-light.png") center center no-repeat;
+        background: url("angle-dark.png") center center no-repeat;
         display: inline-block;
         height: 10px;
         margin-left: $mainGutter/2;

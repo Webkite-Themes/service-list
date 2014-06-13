@@ -560,7 +560,8 @@
 #webkite-results .webkite-categories {
   font-size: 0.8575em;
   line-height: 1.1;
-  margin-bottom: 5px; }
+  margin-bottom: 5px;
+  color: rgba(255, 255, 255, 0.6); }
   #webkite-results .webkite-categories .webkite-category + .webkite-subcategory::before {
     content: '\2022\0020';
     color: rgba(255, 255, 255, 0.7);
@@ -643,7 +644,7 @@
     height: 2em;
     margin-left: -5px; }
     #webkite-results .webkite-block li b > .webkite-toggle i {
-      background: url("angle-light.png") center center no-repeat;
+      background: url("angle-dark.png") center center no-repeat;
       display: inline-block;
       height: 10px;
       margin-left: 10px;

@@ -560,7 +560,8 @@
 #webkite-results .webkite-categories {
   font-size: 0.8575em;
   line-height: 1.1;
-  margin-bottom: 5px; }
+  margin-bottom: 5px;
+  color: rgba(0, 0, 0, 0.4); }
   #webkite-results .webkite-categories .webkite-category + .webkite-subcategory::before {
     content: '\2022\0020';
     color: rgba(0, 0, 0, 0.6);
