@@ -93,6 +93,7 @@ $subduedText: rgba(0,0,0,0.4);
     line-height:1.1;
     margin-bottom:$mainGutter/4;
     color:$subduedText;
+    &:empty{display:none;}
     .webkite-category + .webkite-subcategory::before {
       content:'\2022\0020';
       color:$lightOpacity;

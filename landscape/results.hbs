@@ -16,8 +16,8 @@
               <div class="webkite-block webkite-block-seventy">
                 
                 {{#any (find facets name="Category") (find facets name="Sub-Category")}}
-                  <div{{#unless @key}} class="webkite-categories"{{/unless}}>
-                    {{#unless @key}}
+                  <div class="webkite-categories">
+                    {{~#unless @key~}}
                       {{~#facet name="Category"}}
                         <span class="facet-values webkite-category">
                           {{~#if filterable}}
@@ -30,7 +30,7 @@
                           {{/if}}
                         </span>
                       {{~/facet~}}
-                    {{/unless}}
+                    {{~/unless~}}
                     {{~#facet name="Sub-Category"}}
                       <span class="facet-values webkite-subcategory">
                         {{~#if filterable}}
