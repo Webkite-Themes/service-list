@@ -7,68 +7,75 @@
 
 <div class="webkite-results-wrapper">
   {{#if items.length~}}
-    {{#each this.items~}}
-      <section class="webkite-result">
-        <div class="webkite-block-group">
-          <div class="webkite-block webkite-block-seventy">
-            
-            {{#any (find facets name="Category") (find facets name="Sub-Category")}}
-              <div class="webkite-categories">
-                {{~#facet name="Category"}}
-                  <span class="facet-values webkite-category">
-                    {{~#if filterable}}
-                      {{~#each values~}}
-                        <a href="#" class="webkite-add-filter" data-facet="{{../name}}" data-operator="is" data-value="{{this}}">{{this}}</a>
-                        {{~#unless @last}}, {{/unless~}}
-                      {{~/each}}
-                    {{~else}}
-                      {{displayValue}}
-                    {{/if}}
-                  </span>
-                {{~/facet~}}
-                {{~#facet name="Sub-Category"}}
-                  <span class="facet-values webkite-subcategory">
-                    {{~#if filterable}}
-                      {{~#each values~}}
-                        <a href="#" class="webkite-add-filter" data-facet="{{../name}}" data-operator="is" data-value="{{this}}">{{this}}</a>
-                        {{~#unless @last}}, {{/unless~}}
-                      {{~/each}}
-                    {{~else}}
-                      {{displayValue}}
-                    {{/if}}
-                  </span>
-                {{~/facet~}}
-              </div>
-            {{/any}}
-            
-            {{#facet name="Name"~}}
-              <h2 class="webkite-service-title">{{displayValue}}</h2>
-            {{~/facet}}
-            
-            {{#facet name="Description"~}}
-              <p class="webkite-description">{{displayValue}}</p>
-            {{~/facet}}
-          </div><!-- 70
-
-       --><div class="webkite-block webkite-block-thirty webkite-prices">
-            {{#if (find facets name="Sale")}}
-              <span class="webkite-sale-label">&nbsp;</span>
-            {{else}}
-              <span class="webkite-sale-label xs-exclude">&nbsp;</span>
-            {{/if}}
-
-            {{#if (find facets name="Price")~}}
-              {{#facet name="Price"}}
-                <span class="webkite-price" title="{{displayValue}}">{{displayValue}}</span>
-              {{/facet}}
-              {{#facet name="Unit"~}}
-                <span class="webkite-price-unit">{{displayValue}}</span>
-              {{~/facet}}
-            {{/if}}
-          </div><!-- 30 -->
-          
-        </div><!-- block-group -->
-      </section>
+    {{#each (groupedItems this.items)~}}
+      {{#if @key}}<h1 class="webkite-group-name">{{@key}}</h1>{{/if}}
+      <div class="webkite-group">
+        {{#each this~}}
+          <section class="webkite-result">
+            <div class="webkite-block-group">
+              <div class="webkite-block webkite-block-seventy">
+                
+                {{#any (find facets name="Category") (find facets name="Sub-Category")}}
+                  <div{{#unless @key}} class="webkite-categories"{{/unless}}>
+                    {{#unless @key}}
+                      {{~#facet name="Category"}}
+                        <span class="facet-values webkite-category">
+                          {{~#if filterable}}
+                            {{~#each values~}}
+                              <a href="#" class="webkite-add-filter" data-facet="{{../name}}" data-operator="is" data-value="{{this}}">{{this}}</a>
+                              {{~#unless @last}}, {{/unless~}}
+                            {{~/each}}
+                          {{~else}}
+                            {{displayValue}}
+                          {{/if}}
+                        </span>
+                      {{~/facet~}}
+                    {{/unless}}
+                    {{~#facet name="Sub-Category"}}
+                      <span class="facet-values webkite-subcategory">
+                        {{~#if filterable}}
+                          {{~#each values~}}
+                            <a href="#" class="webkite-add-filter" data-facet="{{../name}}" data-operator="is" data-value="{{this}}">{{this}}</a>
+                            {{~#unless @last}}, {{/unless~}}
+                          {{~/each}}
+                        {{~else}}
+                          {{displayValue}}
+                        {{/if}}
+                      </span>
+                    {{~/facet~}}
+                  </div>
+                {{/any}}
+                
+                {{#facet name="Name"~}}
+                  <h2 class="webkite-service-title">{{displayValue}}</h2>
+                {{~/facet}}
+                
+                {{#facet name="Description"~}}
+                  <p class="webkite-description">{{displayValue}}</p>
+                {{~/facet}}
+              </div><!-- 70
+    
+           --><div class="webkite-block webkite-block-thirty webkite-prices">
+                {{#if (find facets name="Sale")}}
+                  <span class="webkite-sale-label">&nbsp;</span>
+                {{else}}
+                  <span class="webkite-sale-label xs-exclude">&nbsp;</span>
+                {{/if}}
+    
+                {{#if (find facets name="Price")~}}
+                  {{#facet name="Price"}}
+                    <span class="webkite-price" title="{{displayValue}}">{{displayValue}}</span>
+                  {{/facet}}
+                  {{#facet name="Unit"~}}
+                    <span class="webkite-price-unit">{{displayValue}}</span>
+                  {{~/facet}}
+                {{/if}}
+              </div><!-- 30 -->
+              
+            </div><!-- block-group -->
+          </section>
+        {{/each}}
+      </div>
     {{/each}}
   {{else}}
     {{>noresult}}

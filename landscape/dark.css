@@ -611,6 +611,16 @@
     width: 70%; }
 
 /************************************ LANDSCAPE RESULTS */
+#webkite-results .webkite-results-wrapper {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 20px; }
+#webkite-results .webkite-group-name {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 18px;
+  font-family: 'Open Sans', 'Arial', sans-serif;
+  line-height: 1em;
+  margin: 0 0 20px;
+  padding: 0; }
 #webkite-results .webkite-result {
   padding-bottom: 10px;
   margin-bottom: 10px;
@@ -619,7 +629,7 @@
   position: relative;
   line-height: 1.25; }
   #webkite-results .webkite-result:last-child {
-    margin-bottom: 20px; }
+    border-bottom: none; }
 #webkite-results .webkite-categories {
   font-size: 0.8575em;
   line-height: 1.1;
@@ -753,8 +763,7 @@
 /******************************************* NO RESULTS */
 #webkite-results .webkite-no-results {
   padding: 0 0 20px;
-  margin-bottom: 20px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+  margin-bottom: 0; }
 
 /************************************** ELEMENT QUERIES */
 #webkite-results.xs .webkite-block {
