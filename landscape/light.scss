@@ -1,16 +1,17 @@
 $colorVariant:light;
+$themeName:service-list-landscape;
 $subduedText: rgba(0,0,0,0.4);
 
 //CALL UNIVERSALS
 @import '../globals/universals';
 
 /* RESET */
-#webkite-results{
+#webkite-results.#{$themeName}{
   @include resetThings;
   }
 
 /****************************************** BEGIN STYLES */
-#webkite-results{
+#webkite-results.#{$themeName}{
   background: $backgroundColor;
   border: 1px solid $lighterOpacity;
   @include roundedUp(10px);
@@ -27,7 +28,7 @@ $subduedText: rgba(0,0,0,0.4);
   }
   
 /* TYPOGRAPHY */
-#webkite-results{
+#webkite-results.#{$themeName}{
   h1, h2, h3, h4{margin: 0;}
   h2{
     @include hyphenGreat;
@@ -42,7 +43,7 @@ $subduedText: rgba(0,0,0,0.4);
 @include universalStyles;
   
 /********************************************** BLOCKS */
-#webkite-results{
+#webkite-results.#{$themeName}{
   .webkite-block-group {
     @include boxedUp;
     margin-left:-$mainGutter;
@@ -66,7 +67,7 @@ $subduedText: rgba(0,0,0,0.4);
   }
   
 /************************************ LANDSCAPE RESULTS */
-#webkite-results{
+#webkite-results.#{$themeName}{
   .webkite-results-wrapper {
     border-bottom: 1px solid $lighterOpacity;
     margin-bottom:$mainGutter;
@@ -156,7 +157,7 @@ $subduedText: rgba(0,0,0,0.4);
   }
   
 /************************************** INLINE FILTERS */
-#webkite-results{
+#webkite-results.#{$themeName}{
 
   .webkite-block li b{
     position: relative;
@@ -219,7 +220,7 @@ $subduedText: rgba(0,0,0,0.4);
 }
 
 /******************************************* NO RESULTS */
-#webkite-results{
+#webkite-results.#{$themeName}{
   
   .webkite-no-results{
     padding: 0 0 $mainGutter;
@@ -229,7 +230,7 @@ $subduedText: rgba(0,0,0,0.4);
   }
   
 /************************************** ELEMENT QUERIES */
-#webkite-results.xs{
+#webkite-results.#{$themeName}.xs{
   .webkite-block{
     width: 100%;
     padding-right: 0;
@@ -251,26 +252,26 @@ $subduedText: rgba(0,0,0,0.4);
   .webkite-price + .webkite-price-unit {margin-top:-$mainGutter/5;}
   }
   
-#webkite-results.sm{
+#webkite-results.#{$themeName}.sm{
   .webkite-block ul li{
     b, a, span{width: 100%;}
     .webkite-toggle{width: auto;}
     }
   }
 
-#webkite-results.md{
+#webkite-results.#{$themeName}.md{
   }
 
 /*************************** DISPLAY RULES */
-#webkite-results.xs {
+#webkite-results.#{$themeName}.xs {
   .xs-exclude {display:none;}
   .md-only {display:none;}
   .until-md {display:block;}
   }
-#webkite-results.sm {
+#webkite-results.#{$themeName}.sm {
   .md-only {display:none;}
   .until-md {display:block;}
   }
-#webkite-results.md {
+#webkite-results.#{$themeName}.md {
   .until-md {display:none;}
   }
