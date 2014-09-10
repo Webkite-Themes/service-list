@@ -6,12 +6,12 @@ $subduedText: rgba(0,0,0,0.4);
 @import '../globals/universals';
 
 /* RESET */
-#webkite-results.#{$themeName}{
+#webkite-results.#{$themeName}.webkite-#{$colorVariant}{
   @include resetThings;
   }
 
 /****************************************** BEGIN STYLES */
-#webkite-results.#{$themeName}{
+#webkite-results.#{$themeName}.webkite-#{$colorVariant}{
   background: $backgroundColor;
   border: 1px solid $lighterOpacity;
   @include roundedUp(10px);
@@ -28,7 +28,7 @@ $subduedText: rgba(0,0,0,0.4);
   }
   
 /* TYPOGRAPHY */
-#webkite-results.#{$themeName}{
+#webkite-results.#{$themeName}.webkite-#{$colorVariant}{
   h1, h2, h3, h4{margin: 0;}
   h2{
     @include hyphenGreat;
@@ -43,7 +43,7 @@ $subduedText: rgba(0,0,0,0.4);
 @include universalStyles;
   
 /********************************************** BLOCKS */
-#webkite-results.#{$themeName}{
+#webkite-results.#{$themeName}.webkite-#{$colorVariant}{
   .webkite-block-group {
     @include boxedUp;
     margin-left:-$mainGutter;
@@ -67,7 +67,7 @@ $subduedText: rgba(0,0,0,0.4);
   }
   
 /************************************ LANDSCAPE RESULTS */
-#webkite-results.#{$themeName}{
+#webkite-results.#{$themeName}.webkite-#{$colorVariant}{
   .webkite-results-wrapper {
     border-bottom: 1px solid $lighterOpacity;
     margin-bottom:$mainGutter;
@@ -157,7 +157,7 @@ $subduedText: rgba(0,0,0,0.4);
   }
   
 /************************************** INLINE FILTERS */
-#webkite-results.#{$themeName}{
+#webkite-results.#{$themeName}.webkite-#{$colorVariant}{
 
   .webkite-block li b{
     position: relative;
@@ -220,7 +220,7 @@ $subduedText: rgba(0,0,0,0.4);
 }
 
 /******************************************* NO RESULTS */
-#webkite-results.#{$themeName}{
+#webkite-results.#{$themeName}.webkite-#{$colorVariant}{
   
   .webkite-no-results{
     padding: 0 0 $mainGutter;
@@ -230,7 +230,7 @@ $subduedText: rgba(0,0,0,0.4);
   }
   
 /************************************** ELEMENT QUERIES */
-#webkite-results.#{$themeName}.xs{
+#webkite-results.#{$themeName}.webkite-#{$colorVariant}.xs{
   .webkite-block{
     width: 100%;
     padding-right: 0;
@@ -252,26 +252,26 @@ $subduedText: rgba(0,0,0,0.4);
   .webkite-price + .webkite-price-unit {margin-top:-$mainGutter/5;}
   }
   
-#webkite-results.#{$themeName}.sm{
+#webkite-results.#{$themeName}.webkite-#{$colorVariant}.sm{
   .webkite-block ul li{
     b, a, span{width: 100%;}
     .webkite-toggle{width: auto;}
     }
   }
 
-#webkite-results.#{$themeName}.md{
+#webkite-results.#{$themeName}.webkite-#{$colorVariant}.md{
   }
 
 /*************************** DISPLAY RULES */
-#webkite-results.#{$themeName}.xs {
+#webkite-results.#{$themeName}.webkite-#{$colorVariant}.xs {
   .xs-exclude {display:none;}
   .md-only {display:none;}
   .until-md {display:block;}
   }
-#webkite-results.#{$themeName}.sm {
+#webkite-results.#{$themeName}.webkite-#{$colorVariant}.sm {
   .md-only {display:none;}
   .until-md {display:block;}
   }
-#webkite-results.#{$themeName}.md {
+#webkite-results.#{$themeName}.webkite-#{$colorVariant}.md {
   .until-md {display:none;}
   }
