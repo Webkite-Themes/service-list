@@ -104,7 +104,7 @@
     position: relative; }
   #webkite-results.service-list-landscape.webkite-dark .webkite-results-header .webkite-branding-area a, #webkite-results.service-list-landscape.webkite-dark .webkite-results-footer .webkite-branding-area a {
     background: url("branding-dark.svg") center top no-repeat;
-    background-size: 100%;
+    background-size: 102px 33px;
     display: inline-block;
     height: 34px;
     width: 102px; }
