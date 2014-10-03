@@ -90,6 +90,11 @@
 #webkite-results.service-list-landscape.webkite-light p, #webkite-results.service-list-landscape.webkite-light li {
   color: rgba(0, 0, 0, 0.6); }
 
+/******************************************** GENERAL */
+#webkite-results.service-list-landscape.webkite-light {
+  text-align: left;
+  direction: ltr; }
+
 /******************************************** NAVIGATIONALS */
 #webkite-results.service-list-landscape.webkite-light .webkite-results-header, #webkite-results.service-list-landscape.webkite-light .webkite-results-footer {
   text-align: justify;
