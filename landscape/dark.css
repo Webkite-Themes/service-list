@@ -403,10 +403,10 @@
     #webkite-results.service-list-landscape.webkite-dark .sort-menu li a:hover, #webkite-results.service-list-landscape.webkite-dark .filter-menu li .webkite-link:hover, #webkite-results.service-list-landscape.webkite-dark .filter-menu li a:hover {
       background: #1b9cd2;
       color: white; }
-  #webkite-results.service-list-landscape.webkite-dark .sort-menu li.active a {
+  #webkite-results.service-list-landscape.webkite-dark .sort-menu li.webkite-active a {
     position: relative;
     padding-right: 30px; }
-    #webkite-results.service-list-landscape.webkite-dark .sort-menu li.active a.asc::after, #webkite-results.service-list-landscape.webkite-dark .sort-menu li.active a.desc::after {
+    #webkite-results.service-list-landscape.webkite-dark .sort-menu li.webkite-active a.asc::after, #webkite-results.service-list-landscape.webkite-dark .sort-menu li.webkite-active a.desc::after {
       background: url("sort-direction.png") no-repeat;
       content: "";
       display: block;
@@ -415,9 +415,9 @@
       position: absolute;
       top: 8px;
       right: 10px; }
-    #webkite-results.service-list-landscape.webkite-dark .sort-menu li.active a.asc::after {
+    #webkite-results.service-list-landscape.webkite-dark .sort-menu li.webkite-active a.asc::after {
       background-position: 0 0; }
-    #webkite-results.service-list-landscape.webkite-dark .sort-menu li.active a.desc::after {
+    #webkite-results.service-list-landscape.webkite-dark .sort-menu li.webkite-active a.desc::after {
       background-position: 0 -5px; }
   #webkite-results.service-list-landscape.webkite-dark .filter-menu > li > .webkite-link {
     color: #1b9cd2;
